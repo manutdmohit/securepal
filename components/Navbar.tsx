@@ -243,14 +243,17 @@ export default function Navbar() {
               </div>
 
               {/* Phone and Quote Button */}
-              <div className="mt-4">
+              <div className="mt-2 flex-grow">
                 <a
                   href={`tel:${phoneNumber}`}
                   className="flex items-center text-lg"
                 >
                   <Phone className="mr-2 h-5 w-5" /> {phoneNumber}
                 </a>
-                <Button asChild className="mt-4 w-full">
+                <Button
+                  asChild
+                  className="my-2 w-full bg-gray-900 hover:bg-gray-800 text-white"
+                >
                   <Link href="/contact">Get a Quote</Link>
                 </Button>
               </div>
