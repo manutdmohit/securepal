@@ -209,7 +209,7 @@ export default function Footer() {
                     info@securepal.com
                   </a>
                   <p className="text-sm text-white/70 mt-1">
-                    We'll respond promptly
+                    We&apos;ll respond promptly
                   </p>
                 </div>
               </li>
