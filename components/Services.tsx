@@ -220,7 +220,6 @@ export default function ServicesShowcase() {
               </div>
             </div>
           </motion.div>
-
           {/* Service Details */}
           <motion.div
             className="lg:col-span-8"
@@ -300,23 +299,28 @@ export default function ServicesShowcase() {
                 </div>
               </div>
             </div>
+
+            {/* View All Services Button */}
+            <motion.div
+              className="text-center mt-10"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              <Button
+                asChild
+                size="lg"
+                className="bg-primary hover:bg-primary/90"
+              >
+                <Link href="/services">
+                  View All Services
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+            </motion.div>
           </motion.div>
         </div>
-        {/* Service Cards */}; ;{/* View All Services Button */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.3 }}
-        >
-          <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
-            <Link href="/services">
-              View All Services
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
-        </motion.div>
       </div>
     </section>
   );

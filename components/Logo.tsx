@@ -36,7 +36,7 @@ export default function Logo({
         />
       </div>
       {showText && (
-        <span className={`font-bold ${textClass} whitespace-nowrap`}>
+        <span className={`lg:hidden font-bold ${textClass} whitespace-nowrap`}>
           SecurePal
         </span>
       )}

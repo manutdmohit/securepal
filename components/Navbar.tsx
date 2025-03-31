@@ -22,12 +22,17 @@ const services = [
   { name: 'Router Installation', href: '/services/router-installation' },
   { name: '24/7 IT Support', href: '/services/it-support' },
   { name: 'VoIP Setup', href: '/services/voip-setup' },
-  { name: 'CCTV Monitoring', href: '/services/cctv-monitoring' },
+
   { name: 'Professional Email', href: '/services/email-services' },
   { name: 'Computer Repair', href: '/services/computer-repair' },
   { name: 'Data Backup', href: '/services/data-backup' },
   { name: 'Cybersecurity', href: '/services/cybersecurity' },
   { name: 'Cloud Solutions', href: '/services/cloud-solutions' },
+];
+
+const extraServices = [
+  { name: 'Phone Repair', href: '/services/phone-repair' },
+  { name: 'CCTV Monitoring', href: '/services/cctv-monitoring' },
 ];
 
 export default function Navbar() {
@@ -51,7 +56,7 @@ export default function Navbar() {
 
   return (
     <header
-      className={`sticky top-0 z-50 w-full bg-[#124980] text-primary-foreground ${
+      className={`sticky top-0 z-50 w-full bg-[#094C7C] text-primary-foreground ${
         scrolled ? 'shadow-md' : ''
       }`}
     >
@@ -67,6 +72,11 @@ export default function Navbar() {
                 { name: 'Home', href: '/' },
                 { name: 'About', href: '/about' },
                 { name: 'Services', href: '/services', hasSubmenu: true },
+                {
+                  name: 'Extra Services',
+                  href: '/extra-services',
+                  hasSubmenu: true,
+                },
                 { name: 'Custom Packages', href: '/packages' },
                 { name: 'Pricing', href: '/pricing' },
                 { name: 'Testimonials', href: '/testimonials' },
@@ -81,18 +91,32 @@ export default function Navbar() {
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
                         <ul className="grid w-[400px] p-4 md:w-[500px] lg:w-[600px] grid-cols-2">
-                          {services.map((service) => (
-                            <li key={service.name}>
-                              <NavigationMenuLink asChild>
-                                <Link
-                                  href={service.href}
-                                  className="block p-3 rounded-md hover:bg-accent"
-                                >
-                                  {service.name}
-                                </Link>
-                              </NavigationMenuLink>
-                            </li>
-                          ))}
+                          {item.name === 'Services'
+                            ? services.map((service) => (
+                                <li key={service.name}>
+                                  <NavigationMenuLink asChild>
+                                    <Link
+                                      href={service.href}
+                                      className="block p-3 font-bold rounded-md text-primary hover:bg-accent"
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  </NavigationMenuLink>
+                                </li>
+                              ))
+                            : item.name === 'Extra Services' &&
+                              extraServices.map((service) => (
+                                <li key={service.name}>
+                                  <NavigationMenuLink asChild>
+                                    <Link
+                                      href={service.href}
+                                      className="block p-3 font-bold rounded-md text-primary hover:bg-accent"
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  </NavigationMenuLink>
+                                </li>
+                              ))}
                         </ul>
                       </NavigationMenuContent>
                     </>
@@ -181,6 +205,24 @@ export default function Navbar() {
                   <span className="text-lg font-semibold">Services</span>
                   <div className="grid gap-2 pl-4 border-l">
                     {services.map((service) => (
+                      <Link
+                        key={service.name}
+                        href={service.href}
+                        className={`text-base ${
+                          pathname === service.href ? 'font-medium' : ''
+                        }`}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+
+                <div className="flex flex-col">
+                  <span className="text-lg font-semibold">Extra Services</span>
+                  <div className="grid gap-2 pl-4 border-l">
+                    {extraServices.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
