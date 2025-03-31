@@ -20,7 +20,7 @@ export default function HeroSection() {
       </div>
 
       {/* Overlay gradient with SecurePal blue */}
-      <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-securepal-blue/30 to-black/40 z-10"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-black/70  to-black/40 z-10"></div>
 
       {/* Content */}
       <div className="container relative z-20 flex h-full flex-col items-center justify-center text-center text-white">
@@ -42,7 +42,8 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-white border-none"
+                variant="outline"
+                className="bg-transparent text-white border-white hover:bg-primary hover:text-white"
               >
                 <Link href="/services">Explore Services</Link>
               </Button>

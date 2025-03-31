@@ -18,17 +18,19 @@ export default function AboutPage() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            className="mx-4"
           >
-            <Badge variant="outline" className="mb-4 text-2xl">
+            <Badge variant="default" className="text-white font-medium mb-4">
               About Us
             </Badge>
-            <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl leading-tight">
+            <h1 className="text-primary text-4xl font-extrabold tracking-tight sm:text-5xl leading-tight">
               Your Trusted IT Partner 🚀
             </h1>
-            <p className="mt-6 text-lg text-muted-foreground">
-              **SecurePal** is a leading **Managed Service Provider (MSP)**
-              offering cutting-edge **IT solutions, cybersecurity, cloud
-              services, and web hosting** for businesses worldwide.
+            <p className="mt-6 text-primary text-lg font-medium">
+              <span className="font-bold">SecurePal</span> is a leading Managed
+              Service Provider (MSP) offering cutting-edge IT solutions,
+              cybersecurity, cloud services, and web hosting for businesses
+              worldwide.
             </p>
             <div className="mt-8">
               <Button asChild size="lg">
@@ -39,7 +41,7 @@ export default function AboutPage() {
 
           {/* Right Side: Image */}
           <motion.div
-            className="relative h-[420px] rounded-lg overflow-hidden flex items-center justify-center bg-gray-200 shadow-lg"
+            className="relative h-[420px] rounded-lg overflow-hidden flex items-center justify-center bg-gray-200 shadow-lg mx-4"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -57,17 +59,17 @@ export default function AboutPage() {
       </section>
 
       {/* Our Mission */}
-      <section className="py-20 md:py-28 bg-gray-50 mx-auto">
+      <section className="py-20 md:py-20 mx-auto">
         <div className="container text-center">
-          <Badge variant="outline" className="mb-4">
+          <Badge variant="default" className="text-white font-medium mb-4">
             Our Mission
           </Badge>
-          <h2 className="text-3xl font-extrabold sm:text-4xl">
+          <h2 className="text-primary text-3xl font-extrabold sm:text-4xl">
             Empowering Businesses Through Technology
           </h2>
-          <p className="mt-6 text-lg text-muted-foreground max-w-3xl mx-auto">
-            We provide businesses with **reliable, secure, and innovative IT
-            solutions** that foster growth and success in a rapidly evolving
+          <p className="mt-6 text-lg text-primary max-w-3xl mx-auto font-medium text-left">
+            We provide businesses with reliable, secure, and innovative IT
+            solutions that foster growth and success in a rapidly evolving
             digital landscape.
           </p>
 
@@ -77,19 +79,19 @@ export default function AboutPage() {
                 title: 'Reliability',
                 icon: <CheckCircle className="h-8 w-8 text-primary" />,
                 description:
-                  'Providing **24/7/365** IT services with unmatched dependability.',
+                  'Providing 24/7/365 IT services with unmatched dependability.',
               },
               {
                 title: 'Excellence',
                 icon: <Award className="h-8 w-8 text-primary" />,
                 description:
-                  'Striving for **technical and service excellence** in every solution.',
+                  'Striving for technical and service excellence in every solution.',
               },
               {
                 title: 'Partnership',
                 icon: <Users className="h-8 w-8 text-primary" />,
                 description:
-                  'Building **long-term relationships** as an extension of your team.',
+                  'Building long-term relationships as an extension of your team.',
               },
             ].map((item, index) => (
               <motion.div
@@ -102,8 +104,12 @@ export default function AboutPage() {
                 <div className="mb-4 w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
                   {item.icon}
                 </div>
-                <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="mt-2 text-muted-foreground">{item.description}</p>
+                <h3 className="text-primary text-xl font-semibold">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-primary font-medium">
+                  {item.description}
+                </p>
               </motion.div>
             ))}
           </div>
@@ -111,12 +117,12 @@ export default function AboutPage() {
       </section>
 
       {/* Our Team */}
-      <section className="py-20 md:py-28">
+      <section className="py-20 md:py-20">
         <div className="container text-center">
-          <Badge variant="outline" className="mb-4">
+          <Badge variant="default" className="text-white font-medium mb-4">
             Our Team
           </Badge>
-          <h2 className="text-3xl font-extrabold sm:text-4xl">
+          <h2 className="text-primary text-3xl font-extrabold sm:text-4xl">
             Meet the Experts
           </h2>
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -138,10 +144,12 @@ export default function AboutPage() {
                   />
                   <Users className="w-20 h-20 text-gray-400 absolute" />
                 </div>
-                <h3 className="text-xl font-semibold">Team Member {i}</h3>
-                <p className="text-primary">IT Specialist</p>
-                <p className="mt-2 text-sm text-muted-foreground">
-                  Expert in **network security & cloud computing**.
+                <h3 className="text-primary text-xl font-semibold">
+                  Team Member {i}
+                </h3>
+                <p className="text-primary font-medium">IT Specialist</p>
+                <p className="mt-2 text-sm text-primary font-medium">
+                  Expert in network security & cloud computing.
                 </p>
               </motion.div>
             ))}
@@ -156,7 +164,7 @@ export default function AboutPage() {
             Ready to Work With Us? 🚀
           </h2>
           <p className="mt-4 max-w-2xl mx-auto">
-            **Let's secure your business future.** Get in touch with our IT
+            Let's secure your business future. Get in touch with our IT
             specialists today.
           </p>
           <div className="mt-10">

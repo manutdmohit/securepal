@@ -166,7 +166,7 @@ export default function Navbar() {
             onClick={() => setIsOpen(false)}
           >
             <div
-              className={`fixed right-0 top-0 bottom-0 w-[85vw] max-w-[350px] bg-primary text-primary-foreground p-6 transition-transform duration-300 ${
+              className={`fixed right-0 top-0 bottom-0 w-[85vw] max-w-[350px] bg-[#094C7C] text-primary-foreground p-6 transition-transform duration-300 ${
                 isOpen ? 'translate-x-0' : 'translate-x-full'
               }`}
               onClick={(e) => e.stopPropagation()}
