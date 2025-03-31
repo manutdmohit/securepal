@@ -42,7 +42,7 @@ export default function HeroSection() {
               <Button
                 asChild
                 size="lg"
-                className="bg-securepal-blue hover:bg-securepal-blue/90 text-white border-none"
+                className="bg-primary hover:bg-primary/90 text-white border-none"
               >
                 <Link href="/services">Explore Services</Link>
               </Button>
@@ -52,7 +52,7 @@ export default function HeroSection() {
                 asChild
                 size="lg"
                 variant="outline"
-                className="bg-transparent text-white border-white hover:bg-primary hover:text-securepal-blue"
+                className="bg-transparent text-white border-white hover:bg-primary hover:text-white"
               >
                 <Link href="/contact">Get a Free Consultation</Link>
               </Button>

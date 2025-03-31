@@ -302,61 +302,9 @@ export default function ServicesShowcase() {
             </div>
           </motion.div>
         </div>
-        {/* Service Cards */}
-        <div className="mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {services.slice(0, 3).map((service, index) => (
-            <motion.div
-              key={service.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="group"
-            >
-              <Card className="h-[450px] flex flex-col justify-between transition-transform duration-300 group-hover:-translate-y-2">
-                <div className="relative h-48 w-full">
-                  <Image
-                    src={getImageSrc(service) || '/placeholder.svg'}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    onError={() => handleImageError(service.id)}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                    <div className="p-6">
-                      <div className="flex items-center gap-2">
-                        <div className="p-2 bg-white/20 rounded-full">
-                          {service.icon}
-                        </div>
-                        <h3 className="text-xl font-bold text-white">
-                          {service.title}
-                        </h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="p-6 flex flex-col flex-grow">
-                  <p className="text-gray-600 mb-6 flex-grow">
-                    {service.description}
-                  </p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="w-full border text-gray-700 hover:bg-gray-800 hover:text-white"
-                  >
-                    <Link href={service.link}>
-                      Learn More
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    </Link>
-                  </Button>
-                </div>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-        ; ;{/* View All Services Button */}
+        {/* Service Cards */}; ;{/* View All Services Button */}
         <motion.div
-          className="mt-12 text-center"
+          className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
