@@ -16,7 +16,7 @@ export default function Logo({ size = 'md', className = '' }: LogoProps) {
   };
 
   return (
-    <Link href="/" className={`flex items-center ${className}`}>
+    <Link href="/" className={` flex items-center ${className}`}>
       <div className={`relative ${sizes[size]}`}>
         <Image
           src="/images/1.png"
@@ -26,9 +26,6 @@ export default function Logo({ size = 'md', className = '' }: LogoProps) {
           priority
         />
       </div>
-      <span className="md:hidden text-sm text-white/90 font-bold ml-auto">
-        Complete IT Solution
-      </span>
     </Link>
   );
 }

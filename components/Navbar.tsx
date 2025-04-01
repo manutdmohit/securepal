@@ -43,8 +43,8 @@ export default function Navbar() {
         scrolled ? 'shadow-md' : ''
       }`}
     >
-      <div className="container flex h-20 lg:h-auto items-center justify-between">
-        <div className="flex-shrink-0">
+      <div className="container flex h-22 lg:h-auto items-center justify-between">
+        <div className="flex-shrink-0 py-2">
           <Logo size="md" className="text-primary-foreground" />
         </div>
 
@@ -135,6 +135,9 @@ export default function Navbar() {
           </Button>
         </div>
 
+        <span className="md:hidden text-sm text-white/90 font-bold">
+          COMPLETE IT SOLUTION
+        </span>
         {/* Mobile Menu Button */}
         <div className="flex lg:hidden">
           <Button size="icon" onClick={() => setIsOpen(true)}>
