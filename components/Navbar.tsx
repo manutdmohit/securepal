@@ -45,15 +45,7 @@ export default function Navbar() {
     >
       <div className="container flex h-20 lg:h-auto items-center justify-between">
         <div className="flex-shrink-0">
-          {/* <Logo size="md" className="text-primary-foreground" /> */}
-          <Image
-            src="/images/logo.png"
-            alt="SecurePal Logo"
-            width={100}
-            height={100}
-            className="object-contain"
-            priority
-          />
+          <Logo size="md" className="text-primary-foreground" />
         </div>
 
         <div className="hidden lg:block">

@@ -4,42 +4,31 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 interface LogoProps {
-  showText?: boolean;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
 }
 
-export default function Logo({
-  showText = true,
-  size = 'md',
-  className = '',
-}: LogoProps) {
-  // Increased dimensions for better visibility
-  const dimensions = {
-    sm: { width: 40, height: 40, textClass: 'text-lg' },
-    md: { width: 80, height: 80, textClass: 'text-xl' },
-    lg: { width: 100, height: 100, textClass: 'text-2xl' },
+export default function Logo({ size = 'md', className = '' }: LogoProps) {
+  const sizes = {
+    sm: 'w-12 h-12', // 48px
+    md: 'w-20 h-20', // 80px
+    lg: 'w-20 h-20', // 80px
   };
 
-  const { width, height, textClass } = dimensions[size];
-
   return (
-    <Link href="/" className={`flex items-center gap-3 ${className}`}>
-      <div className="">
+    <Link href="/" className={`flex items-center ${className}`}>
+      <div className={`relative ${sizes[size]}`}>
         <Image
-          src="/images/logo.png"
+          src="/images/1.png"
           alt="SecurePal Logo"
-          width={width}
-          height={height}
+          fill
           className="object-contain"
           priority
         />
       </div>
-      {showText && (
-        <span className={`lg:hidden font-bold ${textClass} whitespace-nowrap`}>
-          SecurePal
-        </span>
-      )}
+      <span className="md:hidden text-sm text-white/90 font-semibold ml-12">
+        SecurePal. Complete IT Solution
+      </span>
     </Link>
   );
 }
