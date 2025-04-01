@@ -43,7 +43,7 @@ export default function Navbar() {
         scrolled ? 'shadow-md' : ''
       }`}
     >
-      <div className="container flex h-auto lg:h-20 items-center justify-between">
+      <div className="container flex h-auto md:h-20 items-center justify-between">
         <div className="flex-shrink-0">
           {/* <Logo size="md" className="text-primary-foreground" /> */}
           <Image
