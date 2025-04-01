@@ -26,8 +26,8 @@ export default function Logo({ size = 'md', className = '' }: LogoProps) {
           priority
         />
       </div>
-      <span className="md:hidden text-sm text-white/90 font-semibold ml-12">
-        SecurePal. Complete IT Solution
+      <span className="md:hidden text-sm text-white/90 font-bold ml-auto">
+        Complete IT Solution
       </span>
     </Link>
   );
