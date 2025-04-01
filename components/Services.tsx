@@ -168,7 +168,7 @@ export default function ServicesShowcase() {
           <h2 className="text-primary text-3xl md:text-4xl font-bold mb-4">
             Comprehensive IT Solutions
           </h2>
-          <p className="text-lg text-primary/95">
+          <p className="text-lg font-bold text-primary/95">
             From cybersecurity to cloud services, we provide end-to-end IT
             solutions tailored to your business needs.
           </p>
@@ -177,7 +177,7 @@ export default function ServicesShowcase() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10">
           {/* Service Selection */}
           <motion.div
-            className="lg:col-span-4 flex flex-col"
+            className="mx-auto lg:col-span-4 flex flex-col"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -282,9 +282,11 @@ export default function ServicesShowcase() {
                           className="flex items-start"
                         >
                           <div className="bg-/10 p-1 rounded-full mr-3 mt-0.5">
-                            <ArrowRight className="h-3 w-3 text-" />
+                            <ArrowRight className="h-3 w-3 text-primary" />
                           </div>
-                          <span>{feature}</span>
+                          <span className="text-primary font-semibold text-sm">
+                            {feature}
+                          </span>
                         </motion.li>
                       ))}
                     </ul>

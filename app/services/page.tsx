@@ -246,8 +246,8 @@ export default function ServicesPage() {
               <Button
                 asChild
                 size="lg"
-                variant="outline"
-                className="bg-transparent text-white border-white hover:bg-white/10"
+                variant="secondary"
+                className="font-medium"
               >
                 <Link href="/contact">Request a Consultation</Link>
               </Button>
@@ -273,7 +273,7 @@ export default function ServicesPage() {
 
       {/* Full Service Package */}
       <section id="full-service" className="py-24 md:py-32">
-        <div className="container px-6 md:px-12 lg:px-24">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <div className="grid gap-16 md:grid-cols-2 items-center">
             <motion.div
               className="relative h-[400px] rounded-xl overflow-hidden shadow-2xl"
@@ -382,7 +382,7 @@ export default function ServicesPage() {
           key={category.title}
           className={`py-20 ${categoryIndex % 2 === 1 ? 'bg-muted' : ''}`}
         >
-          <div className="container px-6 md:px-12 lg:px-24">
+          <div className="container mx-auto px-6 md:px-12 lg:px-24">
             <motion.div
               className="text-center mb-16"
               initial={{ opacity: 0, y: 20 }}
@@ -427,11 +427,7 @@ export default function ServicesPage() {
                         </p>
                       </CardContent>
                       <CardFooter className="pt-2 pb-6 mt-auto">
-                        <Button
-                          asChild
-                          variant="outline"
-                          className="w-full group"
-                        >
+                        <Button asChild className="w-full group">
                           <Link href={service.link}>
                             Learn More{' '}
                             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
@@ -462,7 +458,7 @@ export default function ServicesPage() {
 
       {/* Phone Repair & Replacement - Special Section */}
       <section className="py-24 bg-gradient-to-r from-primary/10 to-primary/5">
-        <div className="container px-6 md:px-12 lg:px-24">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <div className="grid gap-16 md:grid-cols-2 items-center">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
@@ -577,7 +573,7 @@ export default function ServicesPage() {
 
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-24">
-        <div className="container px-6 md:px-12 lg:px-24">
+        <div className="container mx-auto px-6 md:px-12 lg:px-24">
           <motion.div
             className="max-w-3xl mx-auto text-center"
             initial={{ opacity: 0, y: 20 }}

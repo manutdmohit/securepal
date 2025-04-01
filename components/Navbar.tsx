@@ -16,6 +16,7 @@ import Logo from '@/components/Logo';
 import { usePathname } from 'next/navigation';
 
 import { services, extraServices } from '@/components/ServicesHelper';
+import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,9 +43,17 @@ export default function Navbar() {
         scrolled ? 'shadow-md' : ''
       }`}
     >
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container flex h-auto items-center justify-between">
         <div className="flex-shrink-0">
-          <Logo size="md" className="text-primary-foreground" />
+          {/* <Logo size="md" className="text-primary-foreground" /> */}
+          <Image
+            src="/images/logo.png"
+            alt="SecurePal Logo"
+            width={100}
+            height={100}
+            className="object-contain"
+            priority
+          />
         </div>
 
         <div className="hidden lg:block">

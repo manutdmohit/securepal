@@ -18,16 +18,16 @@ export default function Logo({
   const dimensions = {
     sm: { width: 40, height: 40, textClass: 'text-lg' },
     md: { width: 80, height: 80, textClass: 'text-xl' },
-    lg: { width: 70, height: 70, textClass: 'text-2xl' },
+    lg: { width: 100, height: 100, textClass: 'text-2xl' },
   };
 
   const { width, height, textClass } = dimensions[size];
 
   return (
     <Link href="/" className={`flex items-center gap-3 ${className}`}>
-      <div className="" style={{ width: `${width}px`, height: `${height}px` }}>
+      <div className="">
         <Image
-          src="/images/secure-pal-logo.png"
+          src="/images/logo.png"
           alt="SecurePal Logo"
           width={width}
           height={height}
