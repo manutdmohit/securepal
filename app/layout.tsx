@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import PhoneButton from '@/components/PhoneButton';
+import { Toaster } from '@/components/ui/sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -36,6 +37,7 @@ export default function RootLayout({
           <Footer />
           <WhatsAppButton />
           <PhoneButton />
+          <Toaster />
         </div>
         {/* </ThemeProvider> */}
       </body>
