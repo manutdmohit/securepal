@@ -131,7 +131,7 @@ export default function Navbar() {
             asChild
             className="bg-primary-foreground text-primary hover:bg-primary-foreground/80"
           >
-            <Link href="/contact">Get a Quote</Link>
+            <Link href="/packages/request-quote">Get a Quote</Link>
           </Button>
         </div>
 
@@ -282,7 +282,7 @@ export default function Navbar() {
                   asChild
                   className="my-2 w-full bg-white hover:bg-white/80 text-primary"
                 >
-                  <Link href="/contact">Get a Quote</Link>
+                  <Link href="/packages/request-quote">Get a Quote</Link>
                 </Button>
               </div>
             </div>
