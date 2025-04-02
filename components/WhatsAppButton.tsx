@@ -17,7 +17,7 @@ export default function WhatsAppButton() {
     return () => clearTimeout(timer);
   }, []);
 
-  const phoneNumber = '+123456789'; // Replace with actual WhatsApp number
+  const phoneNumber = '+610450506907'; // Replace with actual WhatsApp number
   const message = "Hello! I'm interested in SecurePal's IT services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message
