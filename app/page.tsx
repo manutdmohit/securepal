@@ -16,6 +16,7 @@ import { CheckCircle, Shield, Server, Globe, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import HeroSection from '@/components/Hero';
 import ServicesShowcase from '@/components/Services';
+import TestimonialCarousel from '@/components/Testimonials';
 
 export default function Home() {
   return (
@@ -56,6 +57,8 @@ export default function Home() {
           </motion.div>
         </div>
       </section> */}
+
+      <TestimonialCarousel />
 
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-16 md:py-24">
