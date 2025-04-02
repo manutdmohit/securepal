@@ -17,6 +17,7 @@ import { motion } from 'framer-motion';
 import HeroSection from '@/components/Hero';
 import ServicesShowcase from '@/components/Services';
 import TestimonialCarousel from '@/components/Testimonials';
+import BlogCarousel from '@/components/Blog';
 
 export default function Home() {
   return (
@@ -59,6 +60,7 @@ export default function Home() {
       </section> */}
 
       <TestimonialCarousel />
+      <BlogCarousel />
 
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-16 md:py-24">
