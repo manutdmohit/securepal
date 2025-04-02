@@ -20,7 +20,7 @@ import { services, extraServices } from '@/components/ServicesHelper';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const phoneNumber = '+610450506907';
+  const phoneNumber = '+61450506907';
   const pathname = usePathname();
 
   useEffect(() => {
