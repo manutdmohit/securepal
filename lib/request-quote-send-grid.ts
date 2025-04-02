@@ -22,7 +22,7 @@ export const sendQuoteRequest = async (formData: {
       <p><strong>Email:</strong> ${email}</p>
       <p><strong>Phone:</strong> ${phone}</p>
       <p><strong>Company:</strong> ${company || 'N/A'}</p>
-      <p><strong>Security Needs:</strong></p>
+      <p><strong>Service Needs:</strong></p>
       <p>${securityNeeds}</p>
     `,
   };
