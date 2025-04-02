@@ -118,7 +118,7 @@ export default function AboutPage() {
 
       {/* Our Team */}
       <section className="py-20 md:py-20">
-        <div className="container text-center">
+        <div className="container mx-auto text-center">
           <Badge variant="default" className="text-white font-medium mb-4">
             Our Team
           </Badge>
@@ -126,30 +126,46 @@ export default function AboutPage() {
             Meet the Experts
           </h2>
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((i) => (
+            {[
+              {
+                id: 1,
+                name: 'Sandeep Saud',
+                role: 'IT Specialist',
+                description: 'Expert in network security & cloud computing.',
+                photo: '/images/sandeep-saud.png', // Replace with actual team photo
+              },
+              {
+                id: 2,
+                name: 'Bishal Shiwakoti',
+                role: 'Cybersecurity Analyst',
+                description:
+                  'Passionate about protecting businesses from cyber threats.',
+                photo: '/images/bishal-shiwakoti.png', // Replace with actual team photo
+              },
+            ].map((i) => (
               <motion.div
-                key={i}
+                key={i.id}
                 className="flex flex-col items-center text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i * 0.1 }}
+                transition={{ duration: 0.5, delay: i.id * 0.1 }}
               >
                 <div className="relative mb-4 h-40 w-40 overflow-hidden rounded-full bg-gray-200 flex items-center justify-center shadow-md">
                   <Image
-                    src={`/team-${i}.jpg`} // Replace with actual team images
+                    src={i.photo} // Replace with actual team images
                     alt={`Team Member ${i}`}
                     fill
                     className="object-cover"
                     onError={(e) => (e.currentTarget.style.display = 'none')}
                   />
-                  <Users className="w-20 h-20 text-gray-400 absolute" />
+                  {!i.photo && (
+                    <Users className="w-20 h-20 text-gray-400 absolute" />
+                  )}
                 </div>
-                <h3 className="text-primary text-xl font-semibold">
-                  Team Member {i}
-                </h3>
+                <h3 className="text-primary text-xl font-semibold">{i.name}</h3>
                 <p className="text-primary font-medium">IT Specialist</p>
                 <p className="mt-2 text-sm text-primary font-medium">
-                  Expert in network security & cloud computing.
+                  {i.description}
                 </p>
               </motion.div>
             ))}
@@ -159,7 +175,7 @@ export default function AboutPage() {
 
       {/* CTA Section */}
       <section className="bg-primary text-primary-foreground py-20 md:py-28">
-        <div className="container text-center">
+        <div className="container mx-auto text-center">
           <h2 className="text-3xl font-extrabold sm:text-4xl">
             Ready to Work With Us? 🚀
           </h2>

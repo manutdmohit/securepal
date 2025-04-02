@@ -49,7 +49,7 @@ const responsive = {
 
 const TestimonialCarousel = () => {
   return (
-    <section className="w-full max-w-6xl mx-auto bg-gray-50 text-primary flex flex-col items-center justify-center py-16 px-6 border rounded-md border-gray-200">
+    <section className="w-full max-w-6xl mx-auto bg-gray-50 text-primary flex flex-col items-center justify-center py-16 px-6 mt-16">
       {/* Title */}
       <motion.h2
         className="text-4xl font-bold text-gray-800 dark:text-white mb-8"
@@ -72,7 +72,7 @@ const TestimonialCarousel = () => {
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
-            className="bg-primary text-white p-6 rounded-lg shadow-lg text-center mx-2 flex flex-col items-center min-h-[350px]"
+            className="bg-gray-50 text-primary p-6 rounded-lg shadow-lg text-center mx-2 flex flex-col items-center min-h-[350px]"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -83,7 +83,9 @@ const TestimonialCarousel = () => {
               <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
             </Avatar>
             <Quote size={40} />
-            <p className="text-lg">{testimonial.feedback}</p>
+            <p className="text-primary text-lg font-bold">
+              {testimonial.feedback}
+            </p>
 
             <div className="mt-auto">
               <h3 className="mt-4 text-xl font-semibold">{testimonial.name}</h3>
