@@ -151,7 +151,7 @@ const CustomQuote = () => {
                     value={formData[field.name as keyof typeof formData]}
                     onChange={handleChange}
                     required={field.name !== 'company'}
-                    className="mx-auto w-3/4 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
+                    className="mx-auto md:w-3/4 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
                   />
                 </motion.div>
               ))}
@@ -170,7 +170,7 @@ const CustomQuote = () => {
                   value={formData.securityNeeds}
                   onChange={handleChange}
                   required
-                  className="mx-auto w-3/4 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
+                  className="mx-auto md:w-3/4 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
                 />
               </motion.div>
 
@@ -182,7 +182,7 @@ const CustomQuote = () => {
                 <Button
                   type="submit"
                   disabled={submitting}
-                  className="w-1/2 bg-blue-600 hover:bg-blue-700 transition-all text-lg py-7 rounded-lg shadow-md"
+                  className="md:w-1/2 bg-blue-600 hover:bg-blue-700 transition-all text-lg py-7 rounded-lg shadow-md"
                 >
                   {submitting ? 'Submitting...' : 'Request Quote'}
                 </Button>
