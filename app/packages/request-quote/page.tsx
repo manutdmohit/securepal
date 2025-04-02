@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
 import { toast } from 'sonner';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -59,21 +58,18 @@ const CustomQuote = () => {
           securityNeeds: '',
         });
       } else {
-        toast.error(
-          data.error || 'Failed to submit request. Please try again.',
-          {
-            duration: 5000,
-            position: 'top-right',
-            style: {
-              borderRadius: '10px',
-              background: '#fff0f0', // light red background
-              color: '#cf1322', // dark red text
-              border: '1px solid #ffa39e',
-              boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
-            },
-            icon: '❌', // Or a custom icon component
-          }
-        );
+        toast.error(data.error || 'Failed to submit request.', {
+          duration: 5000,
+          position: 'top-right',
+          style: {
+            borderRadius: '10px',
+            background: '#fff0f0', // light red background
+            color: '#cf1322', // dark red text
+            border: '1px solid #ffa39e',
+            boxShadow: '0 2px 5px rgba(0, 0, 0, 0.2)',
+          },
+          icon: '❌', // Or a custom icon component
+        });
       }
     } catch (error) {
       toast.error('Something went wrong. Please try again.', {
@@ -94,52 +90,37 @@ const CustomQuote = () => {
   };
 
   return (
-    <section className="relative min-h-screen bg-gradient-to-r  text-white py-20 px-6 md:px-12 lg:px-24">
-      {/* Background Graphics */}
-      <div className="absolute inset-0">
-        <div className="absolute top-10 left-10 w-32 h-32 bg-blue-300 opacity-20 blur-3xl rounded-full"></div>
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-blue-400 opacity-25 blur-3xl rounded-full"></div>
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-20 bg-[#F1F5F9]">
+      {/* Header */}
+      <div className="text-center mb-10">
+        <h2 className="text-4xl font-bold text-[#1D4ED8]">
+          Request a Custom Quote
+        </h2>
+        <p className="mt-2 text-lg text-[#1E293B] max-w-2xl mx-auto">
+          Fill out the form below, and we’ll get back to you with a tailored
+          security solution.
+        </p>
       </div>
 
-      <motion.div
-        className="relative max-w-4xl mx-auto text-center"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7 }}
-      >
-        <h2 className="text-5xl font-extrabold tracking-wide text-primary">
-          Get Your Custom Quote
-        </h2>
-        <p className="mt-4 text-lg text-primary font-bold max-w-3xl mx-auto text-left">
-          Tailor-made security solutions designed specifically for your needs.
-          Fill in the details below, and we'll get back to you with a
-          personalized quote.
-        </p>
-      </motion.div>
-
-      <motion.div
-        className="relative mt-10 max-w-3xl mx-auto"
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-      >
-        <Card className="bg-white text-gray-900 shadow-xl rounded-lg overflow-hidden">
-          <CardHeader className="bg-primary/80 text-white py-4">
-            <CardTitle className="text-xl font-semibold text-center">
-              Request a Quote
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="p-8">
-            <form onSubmit={handleSubmit} className="space-y-6">
+      {/* Form Card */}
+      <Card className="w-full max-w-3xl bg-white shadow-lg border border-[#CBD5E1] rounded-lg">
+        <CardHeader className="py-5 border-b border-[#CBD5E1] bg-[#1D4ED8] text-white">
+          <CardTitle className="text-xl font-semibold text-center">
+            Get Your Quote
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="p-8">
+          <form onSubmit={handleSubmit} className="space-y-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {[
                 { name: 'fullName', label: 'Full Name', type: 'text' },
                 { name: 'email', label: 'Email Address', type: 'email' },
                 { name: 'phone', label: 'Phone Number', type: 'tel' },
                 { name: 'company', label: 'Company (Optional)', type: 'text' },
               ].map((field) => (
-                <motion.div key={field.name} whileHover={{ scale: 1.02 }}>
+                <div key={field.name}>
                   <label
-                    className="block text-gray-800 font-medium mb-2"
+                    className="block text-[#1E293B] font-medium mb-2"
                     htmlFor={field.name}
                   >
                     {field.label}
@@ -151,46 +132,43 @@ const CustomQuote = () => {
                     value={formData[field.name as keyof typeof formData]}
                     onChange={handleChange}
                     required={field.name !== 'company'}
-                    className="mx-auto md:w-3/4 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
+                    className="w-full border border-[#CBD5E1] focus:border-[#3B82F6] focus:ring-[#3B82F6] transition rounded-md"
                   />
-                </motion.div>
+                </div>
               ))}
+            </div>
 
-              <motion.div whileHover={{ scale: 1.02 }}>
-                <label
-                  className="block text-gray-800 font-medium mb-2"
-                  htmlFor="securityNeeds"
-                >
-                  Describe Your Security Needs
-                </label>
-                <Textarea
-                  id="securityNeeds"
-                  name="securityNeeds"
-                  rows={4}
-                  value={formData.securityNeeds}
-                  onChange={handleChange}
-                  required
-                  className="mx-auto md:w-3/4 border-gray-300 rounded-md shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-200 transition"
-                />
-              </motion.div>
-
-              <motion.div
-                className="text-center"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.98 }}
+            <div>
+              <label
+                className="block text-[#1E293B] font-medium mb-2"
+                htmlFor="securityNeeds"
               >
-                <Button
-                  type="submit"
-                  disabled={submitting}
-                  className="md:w-1/2 bg-blue-600 hover:bg-blue-700 transition-all text-lg py-7 rounded-lg shadow-md"
-                >
-                  {submitting ? 'Submitting...' : 'Request Quote'}
-                </Button>
-              </motion.div>
-            </form>
-          </CardContent>
-        </Card>
-      </motion.div>
+                Describe Your Security Needs
+              </label>
+              <Textarea
+                id="securityNeeds"
+                name="securityNeeds"
+                rows={4}
+                value={formData.securityNeeds}
+                onChange={handleChange}
+                required
+                className="w-full border border-[#CBD5E1] focus:border-[#3B82F6] focus:ring-[#3B82F6] transition rounded-md"
+              />
+            </div>
+
+            {/* Submit Button */}
+            <div className="text-center">
+              <Button
+                type="submit"
+                disabled={submitting}
+                className="w-3/4 md:w-1/2 bg-[#3B82F6] hover:bg-[#1D4ED8] text-white text-lg py-3 rounded-md transition-all"
+              >
+                {submitting ? 'Submitting...' : 'Request Quote'}
+              </Button>
+            </div>
+          </form>
+        </CardContent>
+      </Card>
     </section>
   );
 };
