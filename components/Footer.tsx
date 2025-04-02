@@ -31,13 +31,13 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <Link
-                href="#"
+                href="https://www.facebook.com/profile.php?id=61574213761720"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
                 aria-label="Facebook"
               >
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link
+              {/* <Link
                 href="#"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
                 aria-label="Twitter"
@@ -57,7 +57,7 @@ export default function Footer() {
                 aria-label="Instagram"
               >
                 <Instagram className="h-5 w-5" />
-              </Link>
+              </Link> */}
             </div>
           </div>
 
@@ -191,10 +191,18 @@ export default function Footer() {
                 <Phone className="mr-3 h-5 w-5 flex-shrink-0 mt-0.5 text-white/90" />
                 <div>
                   <a
-                    href="tel:+1234567890"
-                    className="text-white hover:underline transition-colors"
+                    href="tel:+61450506907"
+                    className="text-white hover:underline transition-colors text-[12px]"
                   >
-                    +1 (123) 456-7890
+                    +61 (450) 506907
+                  </a>
+
+                  {', '}
+                  <a
+                    href="tel:+61451533354"
+                    className="text-white hover:underline transition-colors text-[12px]"
+                  >
+                    +61 (451) 533354
                   </a>
                   <p className="text-sm text-white/70 mt-1">Mon-Fri: 9am-6pm</p>
                 </div>
@@ -203,10 +211,10 @@ export default function Footer() {
                 <Mail className="mr-3 h-5 w-5 flex-shrink-0 mt-0.5 text-white/90" />
                 <div>
                   <a
-                    href="mailto:info@securepal.com"
+                    href="mailto:info@securepal.com.au"
                     className="text-white hover:underline transition-colors"
                   >
-                    info@securepal.com
+                    info@securepal.com.au
                   </a>
                   <p className="text-sm text-white/70 mt-1">
                     We&apos;ll respond promptly
@@ -216,7 +224,9 @@ export default function Footer() {
               <li className="flex items-start">
                 <MapPin className="mr-3 h-5 w-5 flex-shrink-0 mt-0.5 text-white/90" />
                 <div>
-                  <p className="text-white">123 Tech Street, IT City, 12345</p>
+                  <p className="text-white">
+                    Address: 133 10 park road, Hurstville NSW 2220
+                  </p>
                   <p className="text-sm text-white/70 mt-1">
                     Visit during business hours
                   </p>
