@@ -1,7 +1,6 @@
 export const services = [
   { name: 'Full Service Package', href: '/services/full-service' },
-  { name: 'Website Design', href: '/services/website-design' },
-  { name: 'Website Hosting', href: '/services/website-hosting' },
+  { name: 'Website Hosting & Design', href: '/services/website-hosting' },
   { name: 'Router Installation', href: '/services/router-installation' },
   { name: '24/7 IT Support', href: '/services/it-support' },
   { name: 'VoIP Setup', href: '/services/voip-setup' },

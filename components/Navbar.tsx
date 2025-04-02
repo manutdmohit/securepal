@@ -16,7 +16,6 @@ import Logo from '@/components/Logo';
 import { usePathname } from 'next/navigation';
 
 import { services, extraServices } from '@/components/ServicesHelper';
-import Image from 'next/image';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
