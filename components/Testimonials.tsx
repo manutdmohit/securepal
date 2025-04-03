@@ -44,7 +44,7 @@ const TestimonialCarousel = () => {
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
-            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl mx-3 flex flex-col items-center text-center min-h-[400px] h-[450px] w-full max-w-md relative"
+            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl mx-3 flex flex-col items-center text-center min-h-[300px] h-[400px] w-full max-w-md relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -65,8 +65,8 @@ const TestimonialCarousel = () => {
             />
 
             {/* Feedback Text */}
-            <p className="text-lg text-gray-700 dark:text-gray-300 font-medium italic leading-relaxed flex-1 overflow-hidden line-clamp-4">
-              "{testimonial.feedback}"
+            <p className="text-lg text-gray-700 dark:text-gray-300 font-medium italic leading-relaxed flex-1">
+              "{testimonial.homepagetext}"
             </p>
 
             {/* Name */}
