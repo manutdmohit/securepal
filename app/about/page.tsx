@@ -47,7 +47,7 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
           >
             <Image
-              src="/images/1.png" // Replace with actual team photo
+              src="https://images.unsplash.com/photo-1504639725590-34d0984388bd" // Replace with actual team photo
               alt="SecurePal Team"
               fill
               className="object-cover"
