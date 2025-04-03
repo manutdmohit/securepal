@@ -16,6 +16,7 @@ import {
 } from 'lucide-react';
 import Logo from '@/components/Logo';
 import { contactNumber } from '@/constants/phone';
+import { FaLinkedin, FaTiktok } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -39,27 +40,23 @@ export default function Footer() {
               >
                 <Facebook className="h-5 w-5" />
               </Link>
-              {/* <Link
-                href="#"
+
+              <Link
+                href="https://www.tiktok.com/@securepal"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
-                aria-label="Twitter"
+                aria-label="Tiktok"
+                target="_blank"
               >
-                <Twitter className="h-5 w-5" />
+                <FaTiktok className=" h-5 w-5" color="black" />
               </Link>
               <Link
-                href="#"
+                href="https://www.linkedin.com/company/securepal/"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
                 aria-label="LinkedIn"
+                target="_blank"
               >
-                <Linkedin className="h-5 w-5" />
+                <FaLinkedin className=" h-5 w-5" />
               </Link>
-              <Link
-                href="#"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram className="h-5 w-5" />
-              </Link> */}
             </div>
           </div>
 

@@ -18,7 +18,7 @@ const socialLinks = [
   {
     icon: <FaTiktok />,
     link: 'https://www.tiktok.com/@securepal',
-    bg: 'bg-blue-500',
+    bg: 'bg-black/80',
   },
   //   {
   //     icon: <FaWhatsapp />,
