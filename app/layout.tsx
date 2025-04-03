@@ -1,3 +1,5 @@
+'use client';
+
 import type React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -9,10 +11,11 @@ import WhatsAppButton from '@/components/WhatsAppButton';
 import PhoneButton from '@/components/PhoneButton';
 import { Toaster } from '@/components/ui/sonner';
 import SocialMediaBar from '@/components/SocialMediaBar';
+import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] });
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'SecurePal | Managed IT Services Provider',
   description:
     'Professional IT solutions, cybersecurity, cloud services, and website hosting for businesses of all sizes.',
@@ -23,6 +26,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const pathname = usePathname(); // Get the current path
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
@@ -36,7 +40,8 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
-          <SocialMediaBar />
+          {/* Conditionally Render SocialMediaBar */}
+          {pathname !== '/about' && <SocialMediaBar />}
           <WhatsAppButton />
           <PhoneButton />
           <Toaster />
