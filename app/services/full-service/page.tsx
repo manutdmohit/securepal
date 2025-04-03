@@ -23,7 +23,7 @@ const benefits = [
   {
     title: 'Advanced Security Solutions',
     description:
-      'Comprehensive cybersecurity measures to protect your sensitive data.',
+      'Comprehensive cybersecurity measures including Web Security and Email Security to protect your sensitive data.',
     icon: <ShieldCheck className="h-10 w-10 text-primary" />,
   },
   {
@@ -47,7 +47,6 @@ const benefits = [
 
 const pricing = {
   name: 'Full Service Package',
-
   features: [
     '24/7 IT Support',
     'Advanced Security Solutions',
@@ -126,14 +125,27 @@ const FullServicePackage = () => {
           <h3 className="text-2xl font-semibold text-gray-900 dark:text-white">
             {pricing.name}
           </h3>
-          <ul className="mt-4 space-y-3 mx-auto">
+          <ul className="mt-4 space-y-3 mx-auto text-left">
             {pricing.features.map((feature, idx) => (
-              <li
-                key={idx}
-                className="flex mx-auto space-x-2  text-gray-600 dark:text-gray-300"
-              >
-                <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="text-left">{feature}</span>
+              <li key={idx} className="text-gray-600 dark:text-gray-300">
+                <div className="flex items-center space-x-2">
+                  <CheckCircle className="h-5 w-5 text-green-500" />
+                  <span>{feature}</span>
+                </div>
+
+                {/* Show sub-items below "Advanced Security Solutions" */}
+                {feature === 'Advanced Security Solutions' && (
+                  <ul className="ml-8 mt-2 space-y-2 text-gray-600 dark:text-gray-300">
+                    <li className="flex items-center space-x-2">
+                      <ShieldCheck className="h-5 w-5 text-blue-500" />
+                      <span>Web Security</span>
+                    </li>
+                    <li className="flex items-center space-x-2">
+                      <ShieldCheck className="h-5 w-5 text-blue-500" />
+                      <span>Email Security</span>
+                    </li>
+                  </ul>
+                )}
               </li>
             ))}
           </ul>
