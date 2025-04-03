@@ -66,8 +66,10 @@ export default function BlogPage() {
                 {blogPosts[0].author.name.charAt(0)}
               </AvatarFallback>
             </Avatar>
-            <p className="text-gray-700 dark:text-gray-300 text-sm">
-              {blogPosts[0].author.name} • {blogPosts[0].date}
+            <p className="text-gray-700 dark:text-gray-300 text-sm flex items-center space-x-2">
+              <span>{blogPosts[0].author.name}</span>
+              <span>•</span>
+              <span>{blogPosts[0].date}</span>
             </p>
           </div>
           <Button asChild className="mt-4">
@@ -99,7 +101,9 @@ export default function BlogPage() {
                 <p className="text-gray-600 dark:text-gray-300">
                   {post.excerpt}
                 </p>
-                <div className="mt-4 flex items-center space-x-3">
+              </CardContent>
+              <CardFooter className="flex flex-col mt-auto space-y-4">
+                <div className="mt-auto flex items-center space-x-3">
                   <Avatar>
                     <AvatarImage
                       src={post.author.image}
@@ -109,12 +113,12 @@ export default function BlogPage() {
                       {post.author.name.charAt(0)}
                     </AvatarFallback>
                   </Avatar>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    {post.author.name} • {post.date}
+                  <p className="text-gray-700 dark:text-gray-300 text-sm flex items-center space-x-2">
+                    <span>{post.author.name}</span>
+                    <span>•</span>
+                    <span>{post.date}</span>
                   </p>
                 </div>
-              </CardContent>
-              <CardFooter className="mt-auto">
                 <Button asChild className="w-full">
                   <Link href={`/blog/${post.slug}`}>Read More</Link>
                 </Button>

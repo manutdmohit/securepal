@@ -7,7 +7,7 @@ export const blogPosts = [
       'How AI is revolutionizing security protocols and threat detection in the digital era.',
     image: 'https://images.unsplash.com/photo-1697577418970-95d99b5a55cf',
     author: {
-      name: 'Emily Johnson',
+      name: 'Sandeep Saud',
       image: 'https://source.unsplash.com/100x100/?woman,portrait',
     },
     date: 'April 2, 2025',
@@ -67,7 +67,7 @@ export const blogPosts = [
       'Key strategies to protect personal and business data in an interconnected world.',
     image: 'https://images.unsplash.com/photo-1633265486064-086b219458ec',
     author: {
-      name: 'John Doe',
+      name: 'Binod Kunwar',
       image: 'https://source.unsplash.com/100x100/?man,portrait',
     },
     date: 'March 28, 2025',
@@ -143,7 +143,7 @@ export const blogPosts = [
       'A complete guide on ensuring safe and fraud-proof digital payments.',
     image: 'https://images.unsplash.com/photo-1634733988138-bf2c3a2a13fa',
     author: {
-      name: 'Sophia Patel',
+      name: 'Bishal Shiwakoti',
       image: 'https://source.unsplash.com/100x100/?woman,smile',
     },
     date: 'March 18, 2025',
@@ -221,7 +221,7 @@ export const blogPosts = [
       'Understanding cloud security threats and how to protect your business data.',
     image: 'https://images.unsplash.com/photo-1695668548342-c0c1ad479aee',
     author: {
-      name: 'Michael Brown',
+      name: 'Sandeep Saud',
       image: 'https://source.unsplash.com/100x100/?man,thinking',
     },
     date: 'March 10, 2025',
@@ -293,7 +293,7 @@ export const blogPosts = [
       'Blockchain technology is revolutionizing data security by offering decentralized solutions that mitigate risks and enhance transparency.',
     image: 'https://images.unsplash.com/photo-1526378800651-c32d170fe6f8',
     author: {
-      name: 'Daniel Green',
+      name: 'Binod Kunwar',
       image: 'https://source.unsplash.com/100x100/?man,portrait',
     },
     date: 'March 5, 2025',
