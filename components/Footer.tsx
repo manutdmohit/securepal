@@ -34,6 +34,7 @@ export default function Footer() {
                 href="https://www.facebook.com/profile.php?id=61574213761720"
                 className="flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors"
                 aria-label="Facebook"
+                target="_blank"
               >
                 <Facebook className="h-5 w-5" />
               </Link>
@@ -262,18 +263,6 @@ export default function Footer() {
                 className="hover:text-white transition-colors"
               >
                 Terms & Conditions
-              </Link>
-              <Link
-                href="/sitemap"
-                className="hover:text-white transition-colors"
-              >
-                Sitemap
-              </Link>
-              <Link
-                href="/accessibility"
-                className="hover:text-white transition-colors"
-              >
-                Accessibility
               </Link>
             </div>
           </div>
