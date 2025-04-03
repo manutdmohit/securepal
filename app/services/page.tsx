@@ -85,7 +85,7 @@ export default function ServicesPage() {
       ],
     },
     {
-      title: 'Web Services',
+      title: 'Website Design',
       services: [
         {
           icon: <Globe className="h-6 w-6 text-primary" />,
