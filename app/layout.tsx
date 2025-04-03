@@ -8,6 +8,7 @@ import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
 import PhoneButton from '@/components/PhoneButton';
 import { Toaster } from '@/components/ui/sonner';
+import SocialMediaBar from '@/components/SocialMediaBar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({
           <Navbar />
           <main className="flex-1">{children}</main>
           <Footer />
+          <SocialMediaBar />
           <WhatsAppButton />
           <PhoneButton />
           <Toaster />
