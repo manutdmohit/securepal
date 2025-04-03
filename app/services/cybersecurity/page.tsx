@@ -17,7 +17,7 @@ const features = [
   {
     title: 'Advanced Threat Protection',
     description:
-      'AI-powered cybersecurity solutions to prevent cyber attacks before they happen.',
+      'Best-in-class protection against sophisticated cyber attacks.',
     icon: <ShieldCheck className="h-10 w-10 text-primary" />,
   },
   {
