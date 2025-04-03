@@ -6,38 +6,10 @@ import 'react-multi-carousel/lib/styles.css';
 import { motion } from 'framer-motion';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
 import { Quote } from 'lucide-react';
+import { testimonialsData } from '@/constants/testimonials';
 
-// Testimonials Data
-const testimonials = [
-  {
-    name: 'Emily Johnson',
-    role: 'CEO, Tech Innovators',
-    feedback:
-      'SecurePal provided top-notch security solutions tailored to our business needs. Their team is professional, reliable, and proactive!',
-    image: '/avatars/emily.jpg',
-  },
-  {
-    name: 'David Miller',
-    role: 'Operations Manager, SafeCorp',
-    feedback:
-      'We’ve never felt safer! SecurePal’s team is dedicated and highly skilled, ensuring our premises remain secure at all times.',
-    image: '/avatars/david.jpg',
-  },
-  {
-    name: 'Sophia Patel',
-    role: 'Founder, ShieldTech',
-    feedback:
-      'The level of professionalism and expertise from SecurePal is unmatched. Their security assessments helped us identify critical risks.',
-    image: '/avatars/sophia.jpg',
-  },
-  {
-    name: 'James Anderson',
-    role: 'Director, Anderson Enterprises',
-    feedback:
-      'From consultation to execution, SecurePal exceeded our expectations. We now have a robust security system in place!',
-    image: '/avatars/james.jpg',
-  },
-];
+// Updated Testimonials Data
+const testimonials = testimonialsData;
 
 // Carousel Responsive Settings
 const responsive = {
@@ -72,7 +44,7 @@ const TestimonialCarousel = () => {
         {testimonials.map((testimonial, index) => (
           <motion.div
             key={index}
-            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl mx-3 flex flex-col items-center text-center min-h-[400px] relative"
+            className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-xl mx-3 flex flex-col items-center text-center min-h-[400px] h-[450px] w-full max-w-md relative"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
@@ -88,22 +60,20 @@ const TestimonialCarousel = () => {
             {/* Quote Icon */}
             <Quote
               size={48}
-              className="text-primary absolute top-6 left-6 opacity-20"
+              className="text-primary  absolute top-6 left-6"
+              // color=""
             />
 
             {/* Feedback Text */}
-            <p className="text-lg text-gray-700 dark:text-gray-300 font-medium italic leading-relaxed">
+            <p className="text-lg text-gray-700 dark:text-gray-300 font-medium italic leading-relaxed flex-1 overflow-hidden line-clamp-4">
               "{testimonial.feedback}"
             </p>
 
-            {/* Name & Role */}
+            {/* Name */}
             <div className="mt-auto">
               <h3 className="mt-6 text-xl font-bold text-gray-900 dark:text-white">
                 {testimonial.name}
               </h3>
-              <span className="text-sm text-gray-500 dark:text-gray-400">
-                {testimonial.role}
-              </span>
             </div>
           </motion.div>
         ))}

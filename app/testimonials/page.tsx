@@ -3,37 +3,10 @@
 import { motion } from 'framer-motion';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { testimonialsData } from '@/constants/testimonials';
 
-const testimonials = [
-  {
-    name: 'Emily Johnson',
-    role: 'CEO, Tech Innovators',
-    feedback:
-      'SecurePal provided top-notch security solutions tailored to our business needs. Their team is professional, reliable, and proactive!',
-    image: '/avatars/emily.jpg',
-  },
-  {
-    name: 'David Miller',
-    role: 'Operations Manager, SafeCorp',
-    feedback:
-      'We’ve never felt safer! SecurePal’s team is dedicated and highly skilled, ensuring our premises remain secure at all times.',
-    image: '/avatars/david.jpg',
-  },
-  {
-    name: 'Sophia Patel',
-    role: 'Founder, ShieldTech',
-    feedback:
-      'The level of professionalism and expertise from SecurePal is unmatched. Their security assessments helped us identify critical risks.',
-    image: '/avatars/sophia.jpg',
-  },
-  {
-    name: 'James Anderson',
-    role: 'Director, Anderson Enterprises',
-    feedback:
-      'From consultation to execution, SecurePal exceeded our expectations. We now have a robust security system in place!',
-    image: '/avatars/james.jpg',
-  },
-];
+// Updated Testimonials Data
+const testimonials = testimonialsData;
 
 const TestimonialsPage = () => {
   return (
@@ -64,7 +37,7 @@ const TestimonialsPage = () => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >
-            <Card className="shadow-lg bg-white border border-gray-200 rounded-lg p-6">
+            <Card className="shadow-lg bg-white border border-gray-200 rounded-lg p-6 min-h-[350px] h-[350px] w-full max-w-md">
               <CardHeader className="flex items-center space-x-4">
                 <Avatar>
                   <AvatarImage src={testimonial.image} alt={testimonial.name} />
@@ -74,7 +47,6 @@ const TestimonialsPage = () => {
                   <CardTitle className="text-lg font-semibold text-gray-900">
                     {testimonial.name}
                   </CardTitle>
-                  <p className="text-sm text-gray-500">{testimonial.role}</p>
                 </div>
               </CardHeader>
               <CardContent>
