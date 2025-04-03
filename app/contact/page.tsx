@@ -10,6 +10,7 @@ import {
   FaPaperPlane,
 } from 'react-icons/fa';
 import { toast } from 'sonner';
+import { contactNumber } from '@/constants/phone';
 
 interface FormData {
   fullName: string;
@@ -143,7 +144,7 @@ const ContactPage = () => {
                   <div className="bg-green-100 p-3 rounded-full">
                     <FaPhone className="text-primary text-xl" />
                   </div>
-                  <p className="text-gray-700">0450506907, 0451533354</p>
+                  <p className="text-gray-700">{contactNumber}</p>
                 </motion.div>
                 <motion.div
                   className="flex items-center gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors duration-300"
