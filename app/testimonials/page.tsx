@@ -11,6 +11,7 @@ const testimonials = testimonialsData;
 const TestimonialsPage = () => {
   return (
     <section className="py-20 px-6 md:px-12 lg:px-24 bg-gray-100">
+      {/* Heading Section */}
       <motion.div
         className="text-center mb-12"
         initial={{ opacity: 0, y: -20 }}
@@ -25,6 +26,7 @@ const TestimonialsPage = () => {
         </p>
       </motion.div>
 
+      {/* Testimonials Grid */}
       <motion.div
         className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-5xl mx-auto"
         initial={{ opacity: 0 }}
@@ -37,11 +39,14 @@ const TestimonialsPage = () => {
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.98 }}
           >
-            <Card className="shadow-lg bg-white border border-gray-200 rounded-lg p-6 min-h-[350px] h-[350px] w-full max-w-md">
+            <Card className="shadow-lg bg-white border border-gray-200 rounded-lg p-6 flex flex-col justify-between min-h-[400px] h-full w-full max-w-md">
+              {/* Card Header */}
               <CardHeader className="flex items-center space-x-4">
-                <Avatar>
+                <Avatar className="w-14 h-14">
                   <AvatarImage src={testimonial.image} alt={testimonial.name} />
-                  <AvatarFallback>{testimonial.name.charAt(0)}</AvatarFallback>
+                  <AvatarFallback className="text-lg">
+                    {testimonial.name.charAt(0)}
+                  </AvatarFallback>
                 </Avatar>
                 <div>
                   <CardTitle className="text-lg font-semibold text-gray-900">
@@ -49,8 +54,10 @@ const TestimonialsPage = () => {
                   </CardTitle>
                 </div>
               </CardHeader>
-              <CardContent>
-                <p className="text-gray-700 text-md italic">
+
+              {/* Card Content */}
+              <CardContent className="flex-grow flex items-center">
+                <p className="text-gray-700 text-md italic text-center">
                   “{testimonial.feedback}”
                 </p>
               </CardContent>
