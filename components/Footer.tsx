@@ -77,11 +77,11 @@ export default function Footer() {
               </li>
               <li>
                 <Link
-                  href="/services/website-design"
+                  href="/services/website-hosting"
                   className="flex items-center text-white/80 hover:text-white transition-colors"
                 >
                   <Globe className="mr-2 h-4 w-4 flex-shrink-0" />
-                  <span>Website Design</span>
+                  <span>Website Hosting & Design</span>
                 </Link>
               </li>
               <li>
