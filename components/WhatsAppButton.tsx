@@ -1,7 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { MessageCircle, X } from 'lucide-react';
+import { X } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 import { Button } from '@/components/ui/button';
 import { WhatsappNumber } from '@/constants/phone';
 
@@ -46,7 +47,7 @@ export default function WhatsAppButton() {
         {isOpen ? (
           <X className="h-8 w-8" />
         ) : (
-          <MessageCircle className="h-6 w-6" />
+          <FaWhatsapp className="h-6 w-6" />
         )}
         <span className="sr-only">
           {isOpen ? 'Close WhatsApp chat' : 'Open WhatsApp chat'}
