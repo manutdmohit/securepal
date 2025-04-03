@@ -15,6 +15,7 @@ import {
   Instagram,
 } from 'lucide-react';
 import Logo from '@/components/Logo';
+import { contactNumber } from '@/constants/phone';
 
 export default function Footer() {
   return (
@@ -192,19 +193,12 @@ export default function Footer() {
                 <Phone className="mr-3 h-5 w-5 flex-shrink-0 mt-0.5 text-white/90" />
                 <div>
                   <a
-                    href="tel:+61450506907"
-                    className="text-white hover:underline transition-colors text-[12px]"
+                    href={'tel:' + contactNumber}
+                    className="text-white hover:underline transition-colors"
                   >
-                    +61 (450) 506907
+                    {contactNumber}
                   </a>
 
-                  {', '}
-                  <a
-                    href="tel:+61451533354"
-                    className="text-white hover:underline transition-colors text-[12px]"
-                  >
-                    +61 (451) 533354
-                  </a>
                   <p className="text-sm text-white/70 mt-1">Mon-Fri: 9am-6pm</p>
                 </div>
               </li>

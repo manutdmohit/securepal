@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { MessageCircle, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { WhatsappNumber } from '@/constants/phone';
 
 export default function WhatsAppButton() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +18,7 @@ export default function WhatsAppButton() {
     return () => clearTimeout(timer);
   }, []);
 
-  const phoneNumber = '+61450506907'; // Replace with actual WhatsApp number
+  const phoneNumber = WhatsappNumber; // Replace with actual WhatsApp number
   const message = "Hello! I'm interested in SecurePal's IT services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
     message

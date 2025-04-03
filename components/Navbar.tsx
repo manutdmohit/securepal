@@ -16,11 +16,12 @@ import Logo from '@/components/Logo';
 import { usePathname } from 'next/navigation';
 
 import { services, extraServices } from '@/components/ServicesHelper';
+import { contactNumber } from '@/constants/phone';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const phoneNumber = '+61450506907';
+  const phoneNumber = contactNumber;
   const pathname = usePathname();
 
   useEffect(() => {

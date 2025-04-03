@@ -2,9 +2,10 @@
 
 import { Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { contactNumber } from '@/constants/phone';
 
 export default function PhoneButton() {
-  const phoneNumber = '+61450506907'; // Replace with actual phone number
+  const phoneNumber = contactNumber;
 
   return (
     <div className="fixed bottom-6 left-6 z-50">
