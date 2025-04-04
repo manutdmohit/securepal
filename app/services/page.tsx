@@ -505,6 +505,12 @@ export default function ServicesPage() {
                   </div>
                   <p>Software troubleshooting and data recovery</p>
                 </div>
+                <div className="flex items-start">
+                  <div className="mt-1 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center mr-3 flex-shrink-0">
+                    <ArrowRight className="h-3 w-3 text-primary" />
+                  </div>
+                  <p>3 months to 6 months warranty on repairs</p>
+                </div>
               </div>
 
               <Button asChild size="lg" className="group">

@@ -11,6 +11,7 @@ import {
   BatteryCharging,
   GlassWater,
   AlertTriangle,
+  CheckCheck,
 } from 'lucide-react';
 import { ContactButtonHelper } from '@/helpers/contact-button-helper';
 
@@ -30,6 +31,10 @@ const services = [
   {
     icon: <AlertTriangle className="h-6 w-6 text-primary" />,
     text: 'Software troubleshooting and data recovery',
+  },
+  {
+    icon: <CheckCheck className="h-6 w-6 text-primary" />,
+    text: '3 months to 6 months warranty on repairs',
   },
 ];
 
