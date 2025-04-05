@@ -132,7 +132,7 @@ export default function AboutPage() {
                 name: 'Sandeep Saud',
                 role: 'IT Specialist',
                 description: 'Expert in network security & cloud computing.',
-                photo: '/images/sandeep-saud.png', // Replace with actual team photo
+                photo: '/images/sandeep-saud.png',
               },
               {
                 id: 2,
@@ -140,7 +140,15 @@ export default function AboutPage() {
                 role: 'Cybersecurity Analyst',
                 description:
                   'Passionate about protecting businesses from cyber threats.',
-                photo: '/images/bishal-shiwakoti.png', // Replace with actual team photo
+                photo: '/images/bishal-shiwakoti.png',
+              },
+              {
+                id: 3,
+                name: 'Mohit Saud',
+                role: 'Web Developer',
+                description:
+                  'Skilled in creating responsive and user-friendly websites.',
+                photo: '/images/mohit-saud.png',
               },
             ].map((i) => (
               <motion.div
@@ -163,7 +171,7 @@ export default function AboutPage() {
                   )}
                 </div>
                 <h3 className="text-primary text-xl font-semibold">{i.name}</h3>
-                <p className="text-primary font-medium">IT Specialist</p>
+                <p className="text-primary font-medium">{i.role}</p>
                 <p className="mt-2 text-sm text-primary font-medium">
                   {i.description}
                 </p>
