@@ -148,7 +148,7 @@ export default function AboutPage() {
                 role: 'Web Developer',
                 description:
                   'Skilled in creating responsive and user-friendly websites.',
-                photo: '/images/public/images/mohit-saud.png',
+                photo: '/images/mohit-saud.png',
               },
             ].map((i) => (
               <motion.div
