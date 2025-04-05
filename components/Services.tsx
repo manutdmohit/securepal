@@ -16,7 +16,6 @@ import {
   Database,
   ArrowRight,
 } from 'lucide-react';
-import { Card } from './ui/card';
 
 // Define service types
 interface Service {
