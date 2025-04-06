@@ -4,7 +4,7 @@ import type React from 'react';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-// import { ThemeProvider } from '@/components/theme-provider';
+
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import WhatsAppButton from '@/components/WhatsAppButton';
@@ -27,15 +27,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const pathname = usePathname(); // Get the current path
+
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-58KHW3KDNN"
+        ></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              
+              gtag('config', 'G-58KHW3KDNN');
+            `,
+          }}
+        ></script>
+      </head>
       <body className={inter.className}>
-        {/* <ThemeProvider
-          attribute="class"
-          defaultTheme="light"
-          enableSystem
-          disableTransitionOnChange
-        > */}
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <main className="flex-1">{children}</main>
@@ -46,7 +58,6 @@ export default function RootLayout({
           <PhoneButton />
           <Toaster />
         </div>
-        {/* </ThemeProvider> */}
       </body>
     </html>
   );
