@@ -257,7 +257,7 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-          <p className="text-sm text-white/70 text-center mt-2">
+          <p className="text-sm text-white/70 text-center mt-2 mb-5 md:mb-auto">
             ABN: 36685653258
           </p>
         </div>
