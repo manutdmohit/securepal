@@ -144,6 +144,14 @@ export default function AboutPage() {
               },
               {
                 id: 3,
+                name: 'Malcolm John Tamang',
+                role: 'Senior Data Engineer',
+                description:
+                  'Experienced in big data analytics and data engineering.',
+                photo: '/images/malcolm-john-tamang.png',
+              },
+              {
+                id: 4,
                 name: 'Mohit Saud',
                 role: 'Web Developer',
                 description:
@@ -165,6 +173,7 @@ export default function AboutPage() {
                     fill
                     className="object-cover"
                     onError={(e) => (e.currentTarget.style.display = 'none')}
+                    priority
                   />
                   {!i.photo && (
                     <Users className="w-20 h-20 text-gray-400 absolute" />
