@@ -34,8 +34,8 @@ export default function HeroSection() {
             Secure IT Solutions for Your Business
           </h1>
           <p className="mt-6 text-lg sm:text-xl md:text-2xl text-white/90">
-            Comprehensive IT services, cybersecurity, cloud solutions, and
-            website hosting tailored to your business needs.
+            Comprehensive IT services, Cybersecurity, Cloud Solutions, And
+            Website Hosting Tailored To Your Business Needs.
           </p>
           <div className="mt-10 flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center">
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>

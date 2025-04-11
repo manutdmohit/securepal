@@ -18,47 +18,16 @@ import HeroSection from '@/components/Hero';
 import ServicesShowcase from '@/components/Services';
 import TestimonialCarousel from '@/components/Testimonials';
 import BlogCarousel from '@/components/Blog';
+import UpgradeSection from '@/components/UpgradeSection';
 
 export default function Home() {
   return (
     <div className="flex flex-col">
       {/* Hero Section - Remove the top padding to blend with navbar */}
       <HeroSection />
+      <UpgradeSection />
       {/* Services Overview */}
       <ServicesShowcase />
-
-      {/* Testimonials */}
-      {/* <section className="bg-muted py-16 md:py-24">
-        <div className="container">
-          <motion.div
-            className="text-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <Badge variant="outline" className="mb-4">
-              Testimonials
-            </Badge>
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-              What Our Clients Say
-            </h2>
-            <p className="mt-4 max-w-2xl mx-auto text-muted-foreground">
-              Don't just take our word for it. Here's what our clients have to
-              say about our services.
-            </p>
-          </motion.div>
-
-          <motion.div
-            className="mt-16"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <TestimonialCarousel />
-          </motion.div>
-        </div>
-      </section> */}
-
       <TestimonialCarousel />
       <BlogCarousel />
 

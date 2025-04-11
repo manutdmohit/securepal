@@ -154,7 +154,7 @@ export default function ServicesShowcase() {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-20  bg-gradient-to-br from-blue-50 to-white ">
       <div className="container">
         {/* Section Header */}
         <motion.div
@@ -168,8 +168,8 @@ export default function ServicesShowcase() {
             Comprehensive IT Solutions
           </h2>
           <p className="text-lg font-bold text-primary/95">
-            From cybersecurity to cloud services, we provide end-to-end IT
-            solutions tailored to your business needs.
+            From Cybersecurity to Cloud Services, We Provide End-to-End IT
+            Solutions Tailored To Your Business Needs.
           </p>
         </motion.div>
         {/* Services Tabs */}

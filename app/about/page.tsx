@@ -4,8 +4,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { CheckCircle, Award, Users, ImageOff } from 'lucide-react';
+import { CheckCircle, Award, Users } from 'lucide-react';
+import { MdVerified } from 'react-icons/md';
 import { motion } from 'framer-motion';
+import { teams } from '@/data/teams';
 
 export default function AboutPage() {
   return (
@@ -126,39 +128,7 @@ export default function AboutPage() {
             Meet the Experts
           </h2>
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                id: 1,
-                name: 'Sandeep Saud',
-                role: 'IT Specialist',
-                description: 'Expert in network security & cloud computing.',
-                photo: '/images/sandeep-saud.png',
-              },
-              {
-                id: 2,
-                name: 'Bishal Shiwakoti',
-                role: 'Cybersecurity Analyst',
-                description:
-                  'Passionate about protecting businesses from cyber threats.',
-                photo: '/images/bishal-shiwakoti.png',
-              },
-              {
-                id: 3,
-                name: 'Malcolm John Tamang',
-                role: 'Senior Data Engineer',
-                description:
-                  'Experienced in big data analytics and data engineering.',
-                photo: '/images/malcolm-john-tamang.png',
-              },
-              {
-                id: 4,
-                name: 'Mohit Saud',
-                role: 'Web Developer',
-                description:
-                  'Skilled in creating responsive and user-friendly websites.',
-                photo: '/images/mohit-saud.png',
-              },
-            ].map((i) => (
+            {teams.map((i) => (
               <motion.div
                 key={i.id}
                 className="flex flex-col items-center text-center"
@@ -179,7 +149,11 @@ export default function AboutPage() {
                     <Users className="w-20 h-20 text-gray-400 absolute" />
                   )}
                 </div>
-                <h3 className="text-primary text-xl font-semibold">{i.name}</h3>
+                <h3 className="text-primary text-xl font-semibold">
+                  {' '}
+                  <MdVerified className="h-6 w-6 text-green-500 mb-1 inline-block" />{' '}
+                  {i.name}
+                </h3>
                 <p className="text-primary font-medium">{i.role}</p>
                 <p className="mt-2 text-sm text-primary font-medium">
                   {i.description}
