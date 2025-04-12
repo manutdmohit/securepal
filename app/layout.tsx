@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import type { Metadata } from 'next';
-import { Inter, Outfit } from 'next/font/google';
+import { Outfit } from 'next/font/google';
 import './globals.css';
 
 import Navbar from '@/components/Navbar';
@@ -12,8 +12,6 @@ import PhoneButton from '@/components/PhoneButton';
 import { Toaster } from '@/components/ui/sonner';
 import SocialMediaBar from '@/components/SocialMediaBar';
 import { usePathname } from 'next/navigation';
-
-const inter = Inter({ subsets: ['latin'] });
 
 const outfit = Outfit({
   subsets: ['latin'], // Specify the character subsets you need
