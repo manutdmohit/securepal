@@ -77,16 +77,19 @@ const BlogCarousel = () => {
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                 className="object-cover rounded-md"
+                priority
               />
             </div>
-            <h3 className="mt-4 text-xl font-semibold">{blog.title}</h3>
-            <p className="text-sm text-gray-600">{blog.excerpt}</p>
-            <Link
-              href={`/blog/${blog.slug}`}
-              className="mt-auto text-blue-600 hover:underline"
-            >
-              Read More
-            </Link>
+            <h3 className="mt-auto text-xl font-semibold">{blog.title}</h3>
+            <div className="text-sm mt-auto">
+              <p className=" text-gray-600">{blog.excerpt}</p>
+              <Link
+                href={`/blog/${blog.slug}`}
+                className=" text-blue-600 mt-2 font-bold  underline decoration-2 decoration-blue-600"
+              >
+                Read More
+              </Link>
+            </div>
           </motion.div>
         ))}
       </Carousel>

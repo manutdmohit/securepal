@@ -69,7 +69,7 @@ export default function Navbar() {
                 <NavigationMenuItem key={item.name}>
                   {item.hasSubmenu ? (
                     <>
-                      <NavigationMenuTrigger className="bg-transparent">
+                      <NavigationMenuTrigger className="bg-transparent text-base">
                         {item.name}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
@@ -106,7 +106,7 @@ export default function Navbar() {
                   ) : (
                     <Link href={item.href} legacyBehavior passHref>
                       <NavigationMenuLink
-                        className={`px-4 py-2 rounded-md transition-colors ${
+                        className={`text-base px-4 py-2 rounded-md transition-colors ${
                           pathname === item.href
                             ? 'bg-primary-foreground/20'
                             : ''

@@ -2,7 +2,7 @@
 
 import type React from 'react';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Outfit } from 'next/font/google';
 import './globals.css';
 
 import Navbar from '@/components/Navbar';
@@ -14,6 +14,11 @@ import SocialMediaBar from '@/components/SocialMediaBar';
 import { usePathname } from 'next/navigation';
 
 const inter = Inter({ subsets: ['latin'] });
+
+const outfit = Outfit({
+  subsets: ['latin'], // Specify the character subsets you need
+  variable: '--font-outfit', // Optional: Define a CSS variable for easier styling
+});
 
 const metadata: Metadata = {
   title: 'SecurePal | Managed IT Services Provider',
@@ -47,7 +52,7 @@ export default function RootLayout({
           }}
         ></script>
       </head>
-      <body className={inter.className}>
+      <body className={outfit.className}>
         <div className="flex min-h-screen flex-col">
           <Navbar />
           <main className="flex-1">{children}</main>
