@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
-import Typewriter from 'typewriter-effect';
+import { useTypewriter } from '@/hooks/useTypewriter';
 
 const heroText = [
   'Secure IT Solutions',
@@ -84,21 +84,14 @@ export default function HeroSection() {
               repeatType: 'reverse',
             }}
           >
-            <Typewriter
-              options={{
-                strings: heroText,
-                autoStart: true,
-                loop: true,
-                delay: typingSpeed,
-                deleteSpeed: deleteSpeed,
-                cursor: '<span style="color:#fff;">|</span>',
-                wrapperClassName: 'typewriter-wrapper',
-              }}
-            />
+            <span>
+              {useTypewriter(heroText, typingSpeed, deleteSpeed)}
+              <span className="text-white animate-pulse">|</span>
+            </span>
           </motion.h1>
 
           <motion.div
-            className="bg-white/7 backdrop-blur-sm/10 rounded-md p-6 mx-auto mt-6 text-lg sm:text-xl md:text-2xl text-white/90"
+            className="bg-white/8 backdrop-blur-sm/10 rounded-md p-6 mx-auto mt-6 text-lg sm:text-xl md:text-2xl text-white/90"
             variants={fadeInUp}
             style={{ animationDelay: '0.2s' }}
           >
