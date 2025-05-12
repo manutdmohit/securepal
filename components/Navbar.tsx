@@ -65,6 +65,7 @@ export default function Navbar() {
                 { name: 'Testimonials', href: '/testimonials' },
                 { name: 'Blog', href: '/blog' },
                 { name: 'Contact', href: '/contact' },
+                { name: 'Book Service', href: '/book-service' },
               ].map((item) => (
                 <NavigationMenuItem key={item.name}>
                   {item.hasSubmenu ? (
@@ -267,6 +268,15 @@ export default function Navbar() {
                   onClick={() => setIsOpen(false)}
                 >
                   Contact
+                </Link>
+                <Link
+                  href="/book-service"
+                  className={`text-lg ${
+                    pathname === '/book-service' ? 'font-bold' : ''
+                  }`}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Book Service
                 </Link>
               </div>
 

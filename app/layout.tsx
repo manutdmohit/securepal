@@ -90,7 +90,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {pathname !== '/about' && <SocialMediaBar />}
           <WhatsAppButton />
           <PhoneButton />
-          <Toaster />
+          <Toaster position="top-right" richColors />
         </div>
       </body>
     </html>
