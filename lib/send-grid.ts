@@ -15,18 +15,17 @@ export const sendEmail = async (formData: {
 
   if (!fullName && !phone && !message) {
     emailContent = {
-      to: 'support@securepal.com.au',
+      to: 'info@securepal.com.au',
       from: 'mohitdev4444@gmail.com',
       subject: `New Request from ${email}`,
       html: `
       <h2>New Application Details:</h2>
     <p><strong>Email:</strong> ${email}</p>
-      
     `,
     };
   } else {
     emailContent = {
-      to: 'support@securepal.com.au',
+      to: 'info@securepal.com.au',
       from: 'mohitdev4444@gmail.com',
       subject: `New Application from ${fullName}`,
       html: `
@@ -58,8 +57,9 @@ export const sendBookingEmail = async (formData: {
 }) => {
   const { name, organization, phone, email, bookingDate, bookingTime } = formData;
 
-  const emailContent = {
-    to: 'support@securepal.com.au',
+  // Email to support team
+  const supportEmailContent = {
+    to: 'info@securepal.com.au',
     from: 'mohitdev4444@gmail.com',
     subject: `New Service Booking from ${name}`,
     html: `
@@ -73,8 +73,29 @@ export const sendBookingEmail = async (formData: {
     `,
   };
 
+  // Email to the booked user
+  const userEmailContent = {
+    to: email,
+    from: 'mohitdev4444@gmail.com',
+    subject: 'Your Service Booking Confirmation - SecurePal',
+    html: `
+      <h2>Thank you for booking with SecurePal!</h2>
+      <p>Dear ${name},</p>
+      <p>We have received your service booking request. Here are your booking details:</p>
+      <p><strong>Date:</strong> ${bookingDate}</p>
+      <p><strong>Time:</strong> ${bookingTime}</p>
+      <p>Our team will review your request and contact you within 24 hours to confirm your booking and discuss your requirements in detail.</p>
+      <p>If you have any questions, please don't hesitate to contact us at (02) 9051 0054.</p>
+      <p>Best regards,<br>The SecurePal Team</p>
+    `,
+  };
+
   try {
-    await sgMail.send(emailContent);
+    // Send both emails
+    await Promise.all([
+      sgMail.send(supportEmailContent),
+      sgMail.send(userEmailContent)
+    ]);
     return { success: true };
   } catch (error) {
     console.error('SendGrid Error:', error);
