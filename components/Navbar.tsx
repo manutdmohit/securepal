@@ -43,12 +43,14 @@ export default function Navbar() {
         scrolled ? 'shadow-md' : ''
       }`}
     >
-      <div className="container flex h-22 lg:h-auto items-center justify-between">
-        <div className="flex-shrink-0 py-2">
+      <div className="container mx-auto flex h-22 lg:h-auto items-center justify-between px-4">
+        {/* Logo - Left aligned */}
+        <div className="flex-shrink-0">
           <Logo size="md" className="text-primary-foreground" />
         </div>
 
-        <div className="hidden lg:block">
+        {/* Navigation Menu - Center */}
+        <div className="hidden lg:block flex-1 mx-8">
           <NavigationMenu className="text-primary-foreground">
             <NavigationMenuList>
               {[
@@ -60,7 +62,7 @@ export default function Navbar() {
                   href: '/extra-services',
                   hasSubmenu: true,
                 },
-                { name: 'Custom Packages', href: '/packages' },
+                { name: 'Packages', href: '/packages' },
                 { name: 'Pricing', href: '/pricing' },
                 { name: 'Testimonials', href: '/testimonials' },
                 { name: 'Blog', href: '/blog' },
@@ -70,7 +72,7 @@ export default function Navbar() {
                 <NavigationMenuItem key={item.name}>
                   {item.hasSubmenu ? (
                     <>
-                      <NavigationMenuTrigger className="bg-transparent text-base">
+                      <NavigationMenuTrigger className="bg-transparent text-sm">
                         {item.name}
                       </NavigationMenuTrigger>
                       <NavigationMenuContent>
@@ -81,7 +83,7 @@ export default function Navbar() {
                                   <NavigationMenuLink asChild>
                                     <Link
                                       href={service.href}
-                                      className="block p-3 font-bold rounded-md text-primary hover:bg-accent"
+                                      className="block p-3 text-sm font-bold rounded-md text-primary hover:bg-accent"
                                     >
                                       {service.name}
                                     </Link>
@@ -94,7 +96,7 @@ export default function Navbar() {
                                   <NavigationMenuLink asChild>
                                     <Link
                                       href={service.href}
-                                      className="block p-3 font-bold rounded-md text-primary hover:bg-accent"
+                                      className="block p-3 text-sm font-bold rounded-md text-primary hover:bg-accent"
                                     >
                                       {service.name}
                                     </Link>
@@ -107,7 +109,7 @@ export default function Navbar() {
                   ) : (
                     <Link href={item.href} legacyBehavior passHref>
                       <NavigationMenuLink
-                        className={`text-base px-4 py-2 rounded-md transition-colors ${
+                        className={`text-sm px-3 py-2 rounded-md transition-colors ${
                           pathname === item.href
                             ? 'bg-primary-foreground/20'
                             : ''
@@ -123,24 +125,25 @@ export default function Navbar() {
           </NavigationMenu>
         </div>
 
-        <div className="hidden lg:flex items-center space-x-4">
-          <a href={`tel:${phoneNumber}`} className="flex items-center text-sm">
+        {/* Phone and Quote Button - Right aligned */}
+        <div className="hidden lg:flex items-center space-x-4 ml-auto">
+          <a href={`tel:${phoneNumber}`} className="flex items-center text-sm whitespace-nowrap">
             <Phone className="mr-2 h-4 w-4" />
-            <span className="hidden xl:inline">{phoneNumber}</span>
+            <span>{phoneNumber}</span>
           </a>
           <Button
             asChild
-            className="bg-primary-foreground text-primary hover:bg-primary-foreground/80"
+            className="bg-primary-foreground text-primary hover:bg-primary-foreground/80 whitespace-nowrap"
           >
             <Link href="/packages/request-quote">Get a Quote</Link>
           </Button>
         </div>
 
-        <span className="md:hidden text-sm text-white/90 font-bold">
-          COMPLETE IT SOLUTION
-        </span>
         {/* Mobile Menu Button */}
-        <div className="flex lg:hidden">
+        <div className="flex lg:hidden items-center">
+          <span className="text-sm text-white/90 font-bold mr-4">
+            COMPLETE IT SOLUTION
+          </span>
           <Button size="icon" onClick={() => setIsOpen(true)}>
             <Menu className="h-6 w-6" />
           </Button>
@@ -173,14 +176,14 @@ export default function Navbar() {
               <div className="flex flex-col gap-4 overflow-y-auto max-h-[calc(100vh-250px)] pr-2">
                 <Link
                   href="/"
-                  className={`text-lg ${pathname === '/' ? 'font-bold' : ''}`}
+                  className={`text-base ${pathname === '/' ? 'font-bold' : ''}`}
                   onClick={() => setIsOpen(false)}
                 >
                   Home
                 </Link>
                 <Link
                   href="/about"
-                  className={`text-lg ${
+                  className={`text-base ${
                     pathname === '/about' ? 'font-bold' : ''
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -189,13 +192,13 @@ export default function Navbar() {
                 </Link>
 
                 <div className="flex flex-col">
-                  <span className="text-lg font-semibold">Services</span>
+                  <span className="text-base font-semibold">Services</span>
                   <div className="grid gap-2 pl-4 border-l">
                     {services.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
-                        className={`text-base ${
+                        className={`text-sm ${
                           pathname === service.href ? 'font-medium' : ''
                         }`}
                         onClick={() => setIsOpen(false)}
@@ -207,13 +210,13 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex flex-col">
-                  <span className="text-lg font-semibold">Extra Services</span>
+                  <span className="text-base font-semibold">Extra Services</span>
                   <div className="grid gap-2 pl-4 border-l">
                     {extraServices.map((service) => (
                       <Link
                         key={service.name}
                         href={service.href}
-                        className={`text-base ${
+                        className={`text-sm ${
                           pathname === service.href ? 'font-medium' : ''
                         }`}
                         onClick={() => setIsOpen(false)}
@@ -226,16 +229,16 @@ export default function Navbar() {
 
                 <Link
                   href="/packages"
-                  className={`text-lg ${
+                  className={`text-base ${
                     pathname === '/packages' ? 'font-bold' : ''
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
-                  Custom Packages
+                  Packages
                 </Link>
                 <Link
                   href="/pricing"
-                  className={`text-lg ${
+                  className={`text-base ${
                     pathname === '/pricing' ? 'font-bold' : ''
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -244,7 +247,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="/testimonials"
-                  className={`text-lg ${
+                  className={`text-base ${
                     pathname === '/testimonials' ? 'font-bold' : ''
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -253,7 +256,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="/blog"
-                  className={`text-lg ${
+                  className={`text-base ${
                     pathname === '/blog' ? 'font-bold' : ''
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -262,7 +265,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="/contact"
-                  className={`text-lg ${
+                  className={`text-base ${
                     pathname === '/contact' ? 'font-bold' : ''
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -271,7 +274,7 @@ export default function Navbar() {
                 </Link>
                 <Link
                   href="/book-service"
-                  className={`text-lg ${
+                  className={`text-base ${
                     pathname === '/book-service' ? 'font-bold' : ''
                   }`}
                   onClick={() => setIsOpen(false)}
@@ -281,16 +284,16 @@ export default function Navbar() {
               </div>
 
               {/* Phone and Quote Button */}
-              <div className="mt-2">
+              <div className="mt-4">
                 <a
                   href={`tel:${phoneNumber}`}
-                  className="flex items-center text-lg"
+                  className="flex items-center text-base"
                 >
                   <Phone className="mr-2 h-5 w-5" /> {phoneNumber}
                 </a>
                 <Button
                   asChild
-                  className="my-2 w-full bg-white hover:bg-white/80 text-primary"
+                  className="mt-2 w-full bg-white hover:bg-white/80 text-primary"
                 >
                   <Link href="/packages/request-quote">Get a Quote</Link>
                 </Button>
