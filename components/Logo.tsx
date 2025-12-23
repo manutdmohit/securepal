@@ -20,7 +20,7 @@ export default function Logo({ size = 'md', className = '' }: LogoProps) {
       <div className={`relative ${sizes[size]}`}>
         <Image
           src="/images/1.png"
-          alt="SecurePal Logo"
+          alt="SecurePal"
           fill
           className="object-contain"
           priority
