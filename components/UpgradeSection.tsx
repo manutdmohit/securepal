@@ -14,9 +14,14 @@ export default function UpgradeSection() {
             🚀 Upgrade to Windows 11 with Us
           </h2>
           <p className="mt-4 text-gray-600 max-w-2xl mx-auto text-lg">
-            Microsoft ends support for Windows 10 on{' '}
-            <strong>October 14, 2025</strong>. Stay protected and productive by
-            upgrading today — we’ll handle everything for you.
+            Microsoft reached its EOL(End Of Life) for Windows 10 on{' '}
+            <strong>
+              {' '}
+              October 14,2025, which means it will no longer be providing
+              important security updates
+            </strong>
+            . Stay protected and productive by upgrading today — we’ll handle
+            everything for you.
           </p>
         </div>
 
