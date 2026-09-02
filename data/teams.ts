@@ -1,18 +1,18 @@
 export const teams = [
   {
-    id: 1,
-    name: 'Sandeep Saud',
-    role: 'IT Specialist',
-    description: 'Expert in network security & cloud computing.',
-    photo: '/images/sandeep-saud.png',
-  },
-  {
-    id: 2,
     name: 'Bishal Shiwakoti',
     role: 'Cybersecurity Analyst',
     description: 'Passionate about protecting businesses from cyber threats.',
     photo: '/images/bishal-shiwakoti.png',
   },
+  {
+    id: 2,
+    name: 'Sandeep Saud',
+    role: 'Junior SOC Analyst',
+    description: 'Expert in network security & cloud computing.',
+    photo: '/images/sandeep-saud.png',
+  },
+
   {
     id: 3,
     name: 'Malcolm John Tamang',
@@ -29,13 +29,6 @@ export const teams = [
   },
   {
     id: 5,
-    name: 'Susmita Thapa',
-    role: 'Marketing Manager',
-    description: 'Experienced in  marketing and branding.',
-    photo: '/images/susmita-thapa.png',
-  },
-  {
-    id: 6,
     name: 'Roshan Baniya',
     role: 'Digital Campaign Manager',
     description: 'Experienced in digital marketing and campaigns.',

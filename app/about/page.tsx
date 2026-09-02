@@ -128,13 +128,13 @@ export default function AboutPage() {
             Meet the Experts
           </h2>
           <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-            {teams.map((i) => (
+            {teams.map((i, index) => (
               <motion.div
                 key={i.id}
                 className="flex flex-col items-center text-center"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: i.id * 0.1 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
               >
                 <div className="relative mb-4 h-40 w-40 overflow-hidden rounded-full bg-gray-200 flex items-center justify-center shadow-md">
                   <Image
