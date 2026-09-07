@@ -1,2 +1,2 @@
-export const contactNumber = '(02) 9051 0054';
+export const contactNumber = '+61451533354';
 export const WhatsappNumber = '+61451533354';
