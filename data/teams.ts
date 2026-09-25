@@ -1,14 +1,14 @@
 export const teams = [
   {
     name: 'Bishal Shiwakoti',
-    role: 'Cybersecurity Analyst',
+    role: 'IT Manager',
     description: 'Passionate about protecting businesses from cyber threats.',
     photo: '/images/bishal-shiwakoti.png',
   },
   {
     id: 2,
     name: 'Sandeep Saud',
-    role: 'Junior SOC Analyst',
+    role: 'SOC Analyst',
     description: 'Expert in network security & cloud computing.',
     photo: '/images/sandeep-saud.png',
   },
@@ -30,8 +30,8 @@ export const teams = [
   {
     id: 5,
     name: 'Roshan Baniya',
-    role: 'Digital Campaign Manager',
-    description: 'Experienced in digital marketing and campaigns.',
+    role: 'IT Support Analyst',
+    description: 'Experienced in IT support.',
     photo: '/images/roshan-baniya.png',
   },
 ];
