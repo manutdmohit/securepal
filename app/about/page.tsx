@@ -155,9 +155,6 @@ export default function AboutPage() {
                   {i.name}
                 </h3>
                 <p className="text-primary font-medium">{i.role}</p>
-                <p className="mt-2 text-sm text-primary font-medium">
-                  {i.description}
-                </p>
               </motion.div>
             ))}
           </div>
